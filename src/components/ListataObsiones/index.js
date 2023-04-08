@@ -1,5 +1,5 @@
 import "./ListaObsiones.css"
-const ListaObsiones = ()=>{
+const ListaObsiones = (props)=>{
     const equipos = [
         "Programación",
         "Front-End",
@@ -9,13 +9,17 @@ const ListaObsiones = ()=>{
         "Movil",
         "Innovacion y Gestión"
     ]
+    const manejarCanbio = (evento)=>{
+        props.actualizarValor(evento.target.value)
+    }
     
     return(
         <div className="listaObsiones">
            <label >Equipos</label>
-           <select>
+           <select value={props.valor} onChange={manejarCanbio}>
+           <option value="" disabled defaultValue="" hidden>Selecionar equipo</option>
             {equipos.map((equipo, index)=>{
-                return <option key={index}>{equipo}</option>
+                return <option key={index}>{equipo} value={equipo}</option>
             })}
             </select> 
         </div>

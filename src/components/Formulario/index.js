@@ -8,12 +8,14 @@ const Formulario = ()=>{
     const [nombre,actualizarNombre]= useState("");
     const [puesto,actualizarPuesto]= useState("");
     const [foto,actualizarFoto]= useState("");
+    const[equipo, actualizarEquipo]= useState("");
     const manejarEvento=(evento)=>{
         evento.preventDefault()
         let datosEnviados = {
             nombre:nombre,
             puesto:puesto,
-            foto:foto
+            foto:foto,
+            equipo:equipo
         }
         console.log(datosEnviados)
     }
@@ -43,7 +45,10 @@ const Formulario = ()=>{
                     valor={foto} 
                     actualizarValor={actualizarFoto}
                 />
-                <ListaObsiones/>
+                <ListaObsiones 
+                    valor={equipo} 
+                    actualizarValor={actualizarEquipo}
+                />
                 <Boton>
                     Crear
                 </Boton>
