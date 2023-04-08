@@ -4,7 +4,7 @@ import Header from './components/header/index.js';
 import Formulario from './components/Formulario';
 import MiOrg from './components/MiOrg';
 function App() {
-  const [mostrarFormulario,estadoFormulario] = useState(false)
+  const [mostrarFormulario,estadoFormulario] = useState(true)
   const cambiarMostar = ()=>{
     estadoFormulario(!mostrarFormulario)
   }
