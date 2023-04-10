@@ -4,6 +4,7 @@ import Header from './components/header/index.js';
 import Formulario from './components/Formulario';
 import MiOrg from './components/MiOrg';
 import Equipo from './components/Equipo';
+import Footer from './components/Footer';
 function App() {
   const [mostrarFormulario,estadoFormulario] = useState(false)
   const [colaboradores, actualizarColaboradores] = useState([])
@@ -72,6 +73,7 @@ function App() {
         />
       )
      }
+     <Footer/>
     </div>
   );
 }
