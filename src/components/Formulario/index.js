@@ -9,6 +9,8 @@ const Formulario = (props)=>{
     const [puesto,actualizarPuesto]= useState("");
     const [foto,actualizarFoto]= useState("");
     const[equipo, actualizarEquipo]= useState("");
+
+    const {registrarColaborador}= props
     const manejarEvento=(evento)=>{
         evento.preventDefault()
         let datosEnviados = {
@@ -17,7 +19,7 @@ const Formulario = (props)=>{
             foto:foto,
             equipo:equipo
         }
-        console.log(datosEnviados)
+        registrarColaborador(datosEnviados)
     }
     
     return(
